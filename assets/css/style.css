@@ -1,0 +1,704 @@
+/* Change box sizing for all elements */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Whole or most-of-the-page styles */
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-image: url("../images/vertical-waves/vertical-waves.png");
+    color: #777777;
+}
+
+.centerThis {
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+/* Style that sidebar */
+
+aside {
+    width: 32%;
+    float: right;
+}
+
+aside > .container > a {
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+}
+
+aside > .container > a > img {
+    display: inline;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    position: relative;
+    margin: 3px;
+}
+
+
+/* Sidebar hover and click interactions */
+
+aside > .container > a > img:hover,
+aside > .container > a > img:active {
+    display: inline;
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+    position: relative;
+    margin: 3px;
+}
+
+
+/* Titles need some style love too */
+
+h1,
+h2,
+h3,
+h3 > a {
+    font-family: 'Georgia', Times, "Times New Roman", serif;
+    font-weight: 800;
+}
+
+h1 {
+    background: #4aaaa5;
+    color: #ffffff;
+    font-size: 36px;
+    padding: 35px 35px;
+    width: 10em;
+    text-align: center;
+    display: inline-block;
+}
+
+h2,
+h3 {
+    color: #4aaaa5;
+    border-bottom: solid 2px #cccccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h3 > a,
+.navLink > a {
+    text-decoration: none;
+    color: #777777;
+}
+
+
+/* Site header */
+
+header {
+    position: relative;
+    background: #ffffff;
+    border-bottom: solid medium #cccccc;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+/* Navigation menu */
+
+nav {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    float: right;
+    top: 42px;
+}
+
+.navLink {
+    padding: 35px 0px;
+}
+
+.navLink > a {
+    padding: 0px 10px;
+    border-right: thin solid #dddddd;
+}
+
+.navLink:last-child > a {
+    padding: 0px 10px;
+    border: none;
+}
+
+
+/* Nav menu hover and click interactions */
+
+.navLink > a:hover,
+.navLink > a:active {
+    color: black;
+    padding: 0px 10px;
+}
+
+
+/* Site content */
+
+.contentContainer {
+    clear: both;
+    min-height: 300px;
+}
+
+.mainContent {
+    width: 64%;
+    margin-right: 30px;
+}
+
+.mainContent,
+aside {
+    display: inline-block;
+    padding: 30px;
+    background: #ffffff;
+    border: thin solid #dddddd;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* About page */
+
+.portrait {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+
+/* Portfolio page */
+
+.portfolioSection {
+    float: left;
+    display: inline-block;
+}
+
+.portfolioSection:nth-child(odd) {
+    clear: both;
+}
+
+.portfolioSection:nth-child(even) {
+    float: right;
+}
+
+.textBanner {
+    position: relative;
+    border: none;
+    background: #4aaaa5;
+    padding: 15px;
+    margin-top: -70px;
+    z-index: 50;
+}
+
+.textBanner > a {
+    color: #ffffff;
+}
+
+
+/* Contact page */
+
+form {
+    line-height: 1.5em;
+}
+
+form input {
+    height: 2em;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: thin #dddddd solid;
+}
+
+.button {
+    padding: 10px 30px;
+    background: #4aaaa5;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    height: 50px;
+    width: 150px;
+}
+
+
+/* Contact page hover and click interactions */
+
+.button:hover {
+    border: thin solid #cccccc;
+    border-right: solid thin #666666;
+    border-bottom: solid thin #666666;
+    font-size: 22px;
+}
+
+.button:active {
+    border: thin solid #cccccc;
+    border-top: solid thin #666666;
+    border-left: solid thin #666666;
+}
+
+
+/* Footer styling */
+
+footer {
+    text-align: center;
+    color: #bbbbbb;
+    font-size: 14px;
+    border-top: thick solid #4aaaa5;
+    background: #666666;
+    box-sizing: border-box;
+    padding-top: 20px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+
+/* Sticky Footer Flexbox Fix */
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+}
+
+
+/* Media Queries for responsive design */
+
+
+/* phone */
+
+@media only screen and (max-width: 640px) {
+
+	/* phone width portrait image layout */
+    .imageWrapper {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .portrait {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0% auto;
+    }
+    .container > p:first-of-type {
+    	margin-top: 2vh;
+        display: inline-block;
+    }
+
+	.centerThis {
+	    width: 100%;
+	}
+
+	.mainContent, aside {
+	    clear: both;
+	    float: none;
+	    display: block;
+	    width: 90%;
+	    margin: 0 auto;
+	}
+
+	aside {
+	    margin-top: 4vh;
+	}
+
+    header {
+        position: static;
+    }
+    h1 {
+        width: 100%;
+    }
+    header .centerThis {
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+        clear: both;
+        top: 0px;
+        background: #fff;
+        height: 3em;
+    }
+    .navLink {
+        width: 32%;
+        height: auto;
+        display: inline-block;
+        padding: 0;
+        margin: 1em 0px;
+        border-right: thin solid #dddddd;
+        text-align: center;
+    }
+    nav .navLink > a {
+        border: none;
+    }
+    .navLink:last-child {
+        border: none;
+    }
+
+    /* Portfolio page, computer screen layout */
+    .portfolioSection {
+    	clear: both;
+        float: none;
+        display: block;
+    }
+    .portfolioSection:nth-child(odd), .portfolioSection:nth-child(even) {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+    .portfolioSection > img {
+    	width: 100%;
+    	height: auto;
+    }
+}
+
+
+/* tablet */
+
+@media only screen and (min-width: 640px) {
+    .imageWrapper {
+        display: inline;
+    }
+    .portrait {
+        display: inline;
+        float: left;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    aside {
+        position: relative;
+        clear: both;
+        display: block;
+        width: 100%;
+    }
+    .centerThis {
+        width: 95%;
+    }
+    .mainContent,
+    aside {
+        width: 100%;
+        margin: 4vh 0;
+    }
+    header {
+        margin-bottom: 4vh;
+    }
+    h1 {
+        width: 10em;
+    }
+    /* Navigation menu */
+    .navLink {
+        width: auto;
+        height: auto;
+        display: inline;
+        margin: auto;
+        border: none;
+        text-align: left;
+        padding: 0;
+    }
+    nav {
+        position: relative;
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+        top: 42px;
+        background: transparent;
+        height: auto;
+        width: auto;
+    }
+    .navLink {
+        padding: 35px 0px;
+    }
+    .navLink > a {
+        padding: 0px 5px;
+        border-right: thin solid #dddddd;
+    }
+    .navLink:last-child > a {
+        padding: 0px 5px;
+        border: none;
+    }
+    /* Nav menu hover and click interactions */
+    .navLink > a:hover,
+    .navLink > a:active {
+        color: black;
+        padding: 0px 10px;
+    }
+    /* Portfolio page, tablet layout */
+    .portfolioSection {
+        float: left;
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 4vh;
+    }
+    .portfolioSection:nth-child(odd) {
+        clear: both;
+    }
+    .portfolioSection:nth-child(even) {
+        float: right;
+    }
+    .textBanner {
+        position: relative;
+        border: none;
+        background: #4aaaa5;
+        padding: 15px;
+        margin-top: -70px;
+        z-index: 50;
+    }
+    .textBanner > a {
+        color: #ffffff;
+    }
+    .portfolioSection > img {
+		width: 100%;
+		height: auto;
+    }
+}
+
+
+/* computer monitor */
+
+@media only screen and (min-width: 980px) {
+    .centerThis {
+        width: 960px;
+        margin: 0 auto;
+    }
+    /* Style that sidebar */
+    aside {
+        width: 32%;
+        float: right;
+    }
+    aside > .container > a {
+        text-decoration: none;
+        width: 60px;
+        height: 60px;
+    }
+    aside > .container > a > img {
+        display: inline;
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        position: relative;
+        margin: 3px;
+    }
+    /* Sidebar hover and click interactions */
+    aside > .container > a > img:hover,
+    aside > .container > a > img:active {
+        display: inline;
+        width: 60px;
+        height: 60px;
+        padding: 0px;
+        position: relative;
+        margin: 3px;
+    }
+    /* Titles need some style love too */
+    h1,
+    h2,
+    h3,
+    h3 > a {
+        font-family: 'Georgia', Times, "Times New Roman", serif;
+        font-weight: 800;
+    }
+    h1 {
+        background: #4aaaa5;
+        color: #ffffff;
+        font-size: 36px;
+        padding: 35px 35px;
+        width: 10em;
+        text-align: center;
+        display: inline-block;
+    }
+    h2,
+    h3 {
+        color: #4aaaa5;
+        border-bottom: solid 2px #cccccc;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    h3 > a,
+    .navLink > a {
+        text-decoration: none;
+        color: #777777;
+    }
+    /* Site header */
+    header {
+        position: relative;
+        background: #ffffff;
+        border-bottom: solid medium #cccccc;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /* Navigation menu */
+    nav {
+        position: relative;
+        display: inline-block;
+        float: right;
+        top: 42px;
+    }
+    .navLink {
+        padding: 35px 0px;
+    }
+    .navLink > a {
+        padding: 0px 10px;
+        border-right: thin solid #dddddd;
+    }
+    .navLink:last-child > a {
+        padding: 0px 10px;
+        border: none;
+    }
+    /* Nav menu hover and click interactions */
+    .navLink > a:hover,
+    .navLink > a:active {
+        color: black;
+        padding: 0px 10px;
+    }
+    /* Site content */
+    .contentContainer {
+        clear: both;
+        min-height: 300px;
+    }
+    .mainContent {
+        width: 64%;
+        margin-right: 30px;
+    }
+    .mainContent,
+    aside {
+        display: inline-block;
+        padding: 30px;
+        background: #ffffff;
+        border: thin solid #dddddd;
+        box-sizing: border-box;
+    }
+    p {
+        font-size: 18px;
+        line-height: 2em;
+        margin-bottom: 20px;
+    }
+    /* About page */
+    .portrait {
+        float: left;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    /* Portfolio page, computer AND phone screen layout */
+    .portfolioSection {
+    	clear: both;
+        float: none;
+        display: block;
+    }
+    .portfolioSection:nth-child(odd), .portfolioSection:nth-child(even) {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+    .portfolioSection > img {
+    	width: 100%;
+    	height: auto;
+    }
+    /* Contact page */
+    form {
+        line-height: 1.5em;
+    }
+    form input {
+        height: 2em;
+        padding-left: 5px;
+        margin-bottom: 10px;
+    }
+    form input,
+    form textarea {
+        width: 100%;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: thin #dddddd solid;
+    }
+    .button {
+        padding: 10px 30px;
+        background: #4aaaa5;
+        border: none;
+        color: #ffffff;
+        font-size: 18px;
+        height: 50px;
+        width: 150px;
+    }
+    /* Contact page hover and click interactions */
+    .button:hover {
+        border: thin solid #cccccc;
+        border-right: solid thin #666666;
+        border-bottom: solid thin #666666;
+        font-size: 22px;
+    }
+    .button:active {
+        border: thin solid #cccccc;
+        border-top: solid thin #666666;
+        border-left: solid thin #666666;
+    }
+    /* Footer styling */
+    footer {
+        text-align: center;
+        color: #bbbbbb;
+        font-size: 14px;
+        border-top: thick solid #4aaaa5;
+        background: #666666;
+        box-sizing: border-box;
+        padding-top: 20px;
+        height: 60px;
+        margin-top: 30px;
+    }
+    /* Sticky Footer Flexbox Fix */
+    .Site {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    .Site-content {
+        flex: 1;
+    }
+
+    /* computer monitor portrait image layout */
+    .imageWrapper {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .portrait {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0% auto;
+    }
+    .container > p:first-of-type {
+        display: inline-block;
+    }
+}
